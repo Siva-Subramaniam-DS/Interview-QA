@@ -10,7 +10,7 @@ This repository contains simplified **Questions and Answers** with **code exampl
 - 🐍 Python Programming  
 - 🧠 AI & Machine Learning  
 - ☁️ Cloud (AWS & Azure)
-
+```
 ---
 
 ## ✅ Database Management & SQL
