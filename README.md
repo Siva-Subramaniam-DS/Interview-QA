@@ -1,7 +1,6 @@
-Sure! Here's a clean and professional `README.md` format you can use for GitHub. It includes simple **Interview Q&A with code snippets** for each topic you mentioned:
+**Interview Q&A with code snippets** 
 
 ---
-
 ```markdown
 # 📘 Interview Preparation: Q&A with Code
 
