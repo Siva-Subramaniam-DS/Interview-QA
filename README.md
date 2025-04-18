@@ -1,7 +1,3 @@
-**Interview Q&A with code snippets** 
-
----
-```markdown
 # 📘 Interview Preparation: Q&A with Code
 
 This repository contains simplified **Questions and Answers** with **code examples** for interview preparation, covering:
@@ -10,7 +6,6 @@ This repository contains simplified **Questions and Answers** with **code exampl
 - 🐍 Python Programming  
 - 🧠 AI & Machine Learning  
 - ☁️ Cloud (AWS & Azure)
-```
 ---
 
 ## ✅ Database Management & SQL
