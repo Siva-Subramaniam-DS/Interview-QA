@@ -432,4 +432,98 @@ It automatically:
 - Use **FastAPI** if you need high performance, auto validation, and modern async features—especially useful for APIs and machine learning model deployment.
 
 ---
+Here are **15 complex multiple-choice questions and answers (OMR-style)** for each of the following sections tailored for a **1–2 years experienced professional**:
+
+---
+
+## 📘 Section 1: **Database Management & SQL**
+
+| Q.No | Question                                                     | Options                                                                                                                                                | Answer |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| 1    | What does the `WITH` clause in SQL provide?                  | A) A loop in SQL<br>B) A temporary result set<br>C) A constraint<br>D) A join condition                                                                | B      |
+| 2    | Which normal form removes transitive dependency?             | A) 1NF<br>B) 2NF<br>C) 3NF<br>D) BCNF                                                                                                                  | C      |
+| 3    | What is a correlated subquery?                               | A) A query inside a query<br>B) A subquery that uses outer query values<br>C) Joins<br>D) View                                                         | B      |
+| 4    | What does the `EXPLAIN` statement do?                        | A) Deletes a table<br>B) Creates indexes<br>C) Shows query plan<br>D) Performs joins                                                                   | C      |
+| 5    | Which index is best for searching a range of values?         | A) Hash Index<br>B) B-Tree<br>C) Bitmap<br>D) Full-text                                                                                                | B      |
+| 6    | What is the result of `SELECT NULL + 5` in most SQL engines? | A) 5<br>B) NULL<br>C) 0<br>D) Error                                                                                                                    | B      |
+| 7    | Which isolation level can lead to phantom reads?             | A) READ UNCOMMITTED<br>B) READ COMMITTED<br>C) REPEATABLE READ<br>D) SERIALIZABLE                                                                      | C      |
+| 8    | When is a full table scan preferred over an index scan?      | A) For small tables<br>B) When no WHERE clause<br>C) When index is corrupt<br>D) All of the above                                                      | D      |
+| 9    | Which clause is used to filter aggregated data?              | A) WHERE<br>B) HAVING<br>C) GROUP BY<br>D) SELECT                                                                                                      | B      |
+| 10   | What does ACID stand for in databases?                       | A) Accurate, Consistent, Isolated, Durable<br>B) Atomicity, Consistency, Isolation, Durability<br>C) Accurate, Calculated, Indexed, Durable<br>D) None | B      |
+| 11   | What is a primary key?                                       | A) A nullable unique identifier<br>B) Always auto-increment<br>C) Uniquely identifies a row<br>D) All of the above                                     | C      |
+| 12   | What is a deadlock in SQL?                                   | A) Query timeout<br>B) Two transactions waiting on each other<br>C) Memory leak<br>D) None                                                             | B      |
+| 13   | What does `ROWNUM` in Oracle represent?                      | A) Row ID<br>B) Result order<br>C) Sequential pseudo column<br>D) None                                                                                 | C      |
+| 14   | What is the function of `COALESCE()` in SQL?                 | A) Joins columns<br>B) Returns first non-null<br>C) Aggregates<br>D) Checks type                                                                       | B      |
+| 15   | What is a materialized view?                                 | A) Live query<br>B) View stored as data<br>C) Temporary table<br>D) Procedure                                                                          | B      |
+
+---
+
+## 🐍 Section 2: **Python Programming**
+
+| Q.No | Question                                              | Options                                                                                              | Answer |
+| ---- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------ |
+| 1    | What is the output of `bool([])`?                     | A) True<br>B) False<br>C) None<br>D) Error                                                           | B      |
+| 2    | Which data structure uses hashing for lookup?         | A) List<br>B) Tuple<br>C) Dictionary<br>D) Set                                                       | C      |
+| 3    | What does `@staticmethod` mean?                       | A) Static function<br>B) No access to class/instance<br>C) Global function<br>D) Instance method     | B      |
+| 4    | How is memory managed in Python?                      | A) Manual<br>B) Garbage collected<br>C) Not managed<br>D) Dynamic typing only                        | B      |
+| 5    | Which is not a valid exception in Python?             | A) TypeError<br>B) IOError<br>C) NullPointerException<br>D) ValueError                               | C      |
+| 6    | What will `a is b` return for `a = [1]`, `b = [1]`?   | A) True<br>B) False<br>C) Error<br>D) None                                                           | B      |
+| 7    | Which module is used for performance profiling?       | A) cProfile<br>B) inspect<br>C) timeit<br>D) tracemalloc                                             | A      |
+| 8    | What is the difference between `deepcopy` and `copy`? | A) No difference<br>B) `copy` is faster<br>C) `deepcopy` copies nested<br>D) `copy` is recursive     | C      |
+| 9    | What is `*args` used for?                             | A) Keyword arguments<br>B) Fixed parameters<br>C) Arbitrary non-keyword arguments<br>D) None         | C      |
+| 10   | What is GIL in Python?                                | A) A global function<br>B) A threading lock<br>C) Garbage Interpreter Lock<br>D) None                | B      |
+| 11   | What does `__init__` do in a class?                   | A) Initializes class<br>B) Creates method<br>C) Deletes class<br>D) None                             | A      |
+| 12   | Which keyword is used to define a generator?          | A) return<br>B) yield<br>C) async<br>D) pass                                                         | B      |
+| 13   | What does `enumerate()` do?                           | A) Creates list<br>B) Creates index-object pair<br>C) Filters<br>D) None                             | B      |
+| 14   | What is duck typing in Python?                        | A) Strong typing<br>B) Type casting<br>C) Type inferred at runtime<br>D) Object shape-based behavior | D      |
+| 15   | Which Python web framework is ASGI-compatible?        | A) Flask<br>B) FastAPI<br>C) Django (WSGI)<br>D) Bottle                                              | B      |
+
+---
+
+## 🤖 Section 3: **Artificial Intelligence & Machine Learning**
+
+| Q.No | Question                                                | Options                                                                                                                      | Answer |
+| ---- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------ |
+| 1    | What is overfitting in ML?                              | A) Model underperforms<br>B) Model performs too well on train data<br>C) Slow training<br>D) None                            | B      |
+| 2    | Which technique is used to handle overfitting?          | A) Data augmentation<br>B) Early stopping<br>C) Regularization<br>D) All of the above                                        | D      |
+| 3    | What is the purpose of `train_test_split()` in sklearn? | A) Train only<br>B) Split data<br>C) Preprocess<br>D) Scale data                                                             | B      |
+| 4    | What is precision in classification?                    | A) TP/(TP+FP)<br>B) TP/(TP+FN)<br>C) FP/(FP+TP)<br>D) TN/(TN+FN)                                                             | A      |
+| 5    | What is RAG in modern LLM systems?                      | A) Recurrent Attention Generator<br>B) Retrieval-Augmented Generation<br>C) ReLU Activation Graph<br>D) Regularized AI Graph | B      |
+| 6    | What does a confusion matrix not include?               | A) True Positives<br>B) False Positives<br>C) Recall<br>D) True Negatives                                                    | C      |
+| 7    | What’s the role of activation functions?                | A) Normalize data<br>B) Introduce non-linearity<br>C) Initialize weights<br>D) Optimize loss                                 | B      |
+| 8    | What is `fine-tuning` in NLP?                           | A) Training from scratch<br>B) Using pretrained model and updating weights<br>C) Pruning<br>D) Data cleaning                 | B      |
+| 9    | What is vector embedding?                               | A) Numeric representation of features<br>B) Text formatting<br>C) Tokenization<br>D) Activation layer                        | A      |
+| 10   | What is cosine similarity used for?                     | A) Model accuracy<br>B) Distance between vectors<br>C) Normalization<br>D) Loss calculation                                  | B      |
+| 11   | What is the output of sigmoid activation?               | A) 0–1<br>B) -1 to 1<br>C) Any real number<br>D) Only integers                                                               | A      |
+| 12   | What does model distillation aim to achieve?            | A) Better visualization<br>B) Compress large models<br>C) Regularization<br>D) Overfitting                                   | B      |
+| 13   | What is batch normalization used for?                   | A) Faster training<br>B) Normalize activations<br>C) Reduce internal covariate shift<br>D) All of the above                  | D      |
+| 14   | What is `cross entropy loss` used for?                  | A) Regression<br>B) Clustering<br>C) Classification<br>D) Reinforcement learning                                             | C      |
+| 15   | What is the benefit of dropout in neural nets?          | A) Slower convergence<br>B) Better generalization<br>C) Higher complexity<br>D) Gradient descent                             | B      |
+
+---
+
+## ☁️ Section 4: **Cloud & Deployment (Preferred)**
+
+| Q.No | Question                                             | Options                                                                                                     | Answer |
+| ---- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------ |
+| 1    | What does `S3` stand for in AWS?                     | A) Simple Storage Service<br>B) Secure Storage Service<br>C) Static Storage Space<br>D) None                | A      |
+| 2    | Which AWS service is best for hosting ML models?     | A) EC2<br>B) S3<br>C) Lambda<br>D) SageMaker                                                                | D      |
+| 3    | Which Azure service provides notebooks and models?   | A) Azure DevOps<br>B) Azure ML Studio<br>C) Azure Blob<br>D) Azure Cosmos DB                                | B      |
+| 4    | What is Docker primarily used for?                   | A) Scaling<br>B) Logging<br>C) Containerization<br>D) Deployment                                            | C      |
+| 5    | Which of the following is serverless?                | A) EC2<br>B) Elastic Beanstalk<br>C) Lambda\<brD) LightSail                                                 | C      |
+| 6    | What is an IAM role in AWS?                          | A) Identity verification<br>B) Access policy<br>C) Backup tool<br>D) Encryption key                         | B      |
+| 7    | What is CI/CD in ML model deployment?                | A) Central Integration<br>B) Continuous Integration / Continuous Deployment<br>C) Cloud Internet<br>D) None | B      |
+| 8    | Which is a container orchestration tool?             | A) GitHub<br>B) Jenkins<br>C) Kubernetes<br>D) Bitbucket                                                    | C      |
+| 9    | How is a Flask app typically deployed to production? | A) Using WSGI server like Gunicorn<br>B) Flask run<br>C) Python run<br>D) Heroku only                       | A      |
+| 10   | What is a Load Balancer used for?                    | A) Balancing databases<br>B) Managing memory<br>C) Distributing traffic<br>D) Scaling RAM                   | C      |
+| 11   | What is Elastic Beanstalk?                           | A) Data warehouse<br>B) Platform-as-a-Service<br>C) Load balancer<br>D) Serverless engine                   | B      |
+| 12   | What is ECS in AWS?                                  | A) Elastic Compute Service<br>B) Elastic Container Service<br>C) Edge Cloud Services<br>D) None             | B      |
+| 13   | How is HTTPS enabled for a Flask app on EC2?         | A) With Gunicorn<br>B) SSL cert + Nginx<br>C) Flask SSL<br>D) AWS by default                                | B      |
+| 14   | What is the benefit of using CDN for ML model API?   | A) Encrypts models<br>B) Improves latency<br>C) Data pipeline<br>D) Version control                         | B      |
+| 15   | What is the use of Dockerfile?                       | A) Logs container<br>B) Describes container build steps<br>C) Runs cronjob<br>D) None                       | B      |
+
+---
+
+Would you like this formatted as a downloadable PDF or Excel for practice?
+
 
