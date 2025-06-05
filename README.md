@@ -1051,5 +1051,87 @@ Using **lineage** (DAG), Spark can recompute lost data by tracking the operation
 
 ---
 
+## 🔹 1. **DDL – Data Definition Language**
 
+**Used to define and manage database structure (schema).**
 
+| Command    | Description                                     |
+| ---------- | ----------------------------------------------- |
+| `CREATE`   | Creates a new table or database                 |
+| `ALTER`    | Modifies an existing table (add/remove columns) |
+| `DROP`     | Deletes a table or database                     |
+| `TRUNCATE` | Deletes all rows from a table (cannot rollback) |
+| `RENAME`   | Renames a table                                 |
+
+**Example:**
+
+```sql
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    salary FLOAT
+);
+```
+
+---
+
+## 🔹 2. **DML – Data Manipulation Language**
+
+**Used to manipulate data inside the tables.**
+
+| Command  | Description                 |
+| -------- | --------------------------- |
+| `INSERT` | Add new records to a table  |
+| `UPDATE` | Modify existing records     |
+| `DELETE` | Remove records from a table |
+| `SELECT` | Retrieve records            |
+
+**Example:**
+
+```sql
+INSERT INTO employees (id, name, salary) VALUES (1, 'John', 50000);
+UPDATE employees SET salary = 55000 WHERE id = 1;
+DELETE FROM employees WHERE id = 1;
+```
+
+---
+
+## 🔹 3. **DCL – Data Control Language**
+
+**Used to control access to data (security permissions).**
+
+| Command  | Description              |
+| -------- | ------------------------ |
+| `GRANT`  | Give access to users     |
+| `REVOKE` | Remove access from users |
+
+**Example:**
+
+```sql
+GRANT SELECT ON employees TO user1;
+REVOKE SELECT ON employees FROM user1;
+```
+
+---
+
+## 🔹 4. **TCL – Transaction Control Language**
+
+**Used to manage transactions in a database.**
+
+| Command           | Description                   |
+| ----------------- | ----------------------------- |
+| `COMMIT`          | Save changes permanently      |
+| `ROLLBACK`        | Undo changes                  |
+| `SAVEPOINT`       | Set a point to rollback to    |
+| `SET TRANSACTION` | Define transaction properties |
+
+**Example:**
+
+```sql
+BEGIN;
+UPDATE employees SET salary = 60000 WHERE id = 2;
+SAVEPOINT sp1;
+DELETE FROM employees WHERE id = 3;
+ROLLBACK TO sp1;
+COMMIT;
+```
