@@ -524,6 +524,532 @@ Here are **15 complex multiple-choice questions and answers (OMR-style)** for ea
 
 ---
 
-Would you like this formatted as a downloadable PDF or Excel for practice?
+## 🔹 SQL Section
+
+### 1. **What is the difference between DDL and DML?**
+
+**Answer:**
+
+* **DDL (Data Definition Language):** Used to define schema – `CREATE`, `ALTER`, `DROP`.
+* **DML (Data Manipulation Language):** Used to manipulate data – `INSERT`, `UPDATE`, `DELETE`.
+
+---
+
+### 2. **Write a query to get the 2nd highest salary from a table `employees`.**
+
+```sql
+SELECT MAX(salary) 
+FROM employees 
+WHERE salary < (SELECT MAX(salary) FROM employees);
+```
+
+---
+
+### 3. **Aggregate Functions Example**
+
+```sql
+SELECT 
+    COUNT(*) AS total_employees,
+    AVG(salary) AS avg_salary,
+    MIN(salary) AS min_salary,
+    MAX(salary) AS max_salary
+FROM employees;
+```
+
+---
+
+### 4. **Difference between INNER JOIN and OUTER JOIN**
+
+* **INNER JOIN:** Returns matching records from both tables.
+* **OUTER JOIN:** Returns matching + non-matching records (NULLs filled in non-matches).
+
+```sql
+SELECT e.name, d.dept_name
+FROM employees e
+LEFT JOIN departments d ON e.dept_id = d.id;
+```
+
+---
+
+### 5. **Example of Window Function**
+
+```sql
+SELECT name, salary,
+       RANK() OVER (ORDER BY salary DESC) AS rank
+FROM employees;
+```
+
+---
+
+### 6. **Query Optimization Techniques**
+
+* Use **indexes**
+* Avoid `SELECT *`
+* Use **JOINs** wisely
+* Use **LIMIT** to restrict rows
+
+---
+
+## 🔹 Python Section
+
+### 1. **What are Python data types?**
+
+**Answer:** int, float, str, list, tuple, dict, set, bool
+
+```python
+x = 5
+print(type(x))  # <class 'int'>
+```
+
+---
+
+### 2. **Numpy Example**
+
+```python
+import numpy as np
+arr = np.array([1, 2, 3])
+print(arr.mean())  # Output: 2.0
+```
+
+---
+
+### 3. **Pandas Example**
+
+```python
+import pandas as pd
+data = {'Name': ['John', 'Jane'], 'Salary': [50000, 60000]}
+df = pd.DataFrame(data)
+print(df.describe())
+```
+
+---
+
+### 4. **Data Visualization using Matplotlib**
+
+```python
+import matplotlib.pyplot as plt
+
+salaries = [40000, 50000, 60000]
+names = ['John', 'Jane', 'Doe']
+plt.bar(names, salaries)
+plt.title('Employee Salary')
+plt.show()
+```
+
+---
+
+### 5. **Regex in Python**
+
+```python
+import re
+text = "Email me at test@example.com"
+match = re.search(r'\S+@\S+', text)
+print(match.group())  # Output: test@example.com
+```
+
+---
+
+## 🔹 Data Structures (Python)
+
+### 1. **Reverse a list**
+
+```python
+my_list = [1, 2, 3, 4]
+print(my_list[::-1])
+```
+
+---
+
+### 2. **Check for Palindrome**
+
+```python
+def is_palindrome(s):
+    return s == s[::-1]
+
+print(is_palindrome("madam"))  # True
+```
+
+---
+
+### 3. **Binary Search**
+
+```python
+def binary_search(arr, target):
+    low, high = 0, len(arr)-1
+    while low <= high:
+        mid = (low + high)//2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+print(binary_search([1, 2, 3, 4, 5], 4))  # Output: 3
+```
+
+---
+Here are the **questions, explanations, and Python code** for the three topics you asked about: **Fibonacci series**, **Leader numbers**, and **Triangle star pattern**.
+
+---
+
+## 🔷 1. Fibonacci Series
+
+**Q: Write a Python program to generate the Fibonacci series up to `n` terms.**
+
+**Fibonacci Series:** 0, 1, 1, 2, 3, 5, 8, 13, ...
+
+**Code:**
+
+```python
+def fibonacci(n):
+    a, b = 0, 1
+    for i in range(n):
+        print(a, end=' ')
+        a, b = b, a + b
+
+# Example: First 10 terms
+fibonacci(10)
+```
+
+---
+
+## 🔷 2. Leader Numbers in an Array
+
+**Q: Write a Python program to find leader elements in an array.**
+
+**Definition:** A **leader** is an element that is **greater than all the elements to its right** in the array.
+
+**Example:**
+For input `[16, 17, 4, 3, 5, 2]` → Output: `17, 5, 2`
+
+**Code:**
+
+```python
+def find_leaders(arr):
+    n = len(arr)
+    leaders = []
+    max_from_right = arr[-1]
+    leaders.append(max_from_right)
+    
+    for i in range(n-2, -1, -1):
+        if arr[i] > max_from_right:
+            max_from_right = arr[i]
+            leaders.append(max_from_right)
+    
+    # Reverse to maintain order of appearance
+    leaders.reverse()
+    return leaders
+
+# Example
+arr = [16, 17, 4, 3, 5, 2]
+print(find_leaders(arr))  # Output: [17, 5, 2]
+```
+
+---
+
+## 🔷 3. Star Triangle Pattern
+
+**Q: Write a program to print a triangle star pattern.**
+
+**Example Output (for 5 rows):**
+
+```
+    *
+   ***
+  *****
+ *******
+*********
+```
+
+**Code:**
+
+```python
+def print_star_triangle(rows):
+    for i in range(rows):
+        spaces = ' ' * (rows - i - 1)
+        stars = '*' * (2 * i + 1)
+        print(spaces + stars)
+
+# Example
+print_star_triangle(5)
+```
+Here are **10 essential beginner-to-intermediate level questions** from **SQL, Python, and PySpark**, complete with **answers and code** examples:
+
+---
+
+## 🔹 SQL – 4 Questions
+
+### 1. **What is the difference between `WHERE` and `HAVING` clause?**
+
+**Answer:**
+
+* `WHERE` filters rows **before** aggregation.
+* `HAVING` filters **after** aggregation.
+
+```sql
+-- WHERE filters rows before GROUP BY
+SELECT department, COUNT(*) 
+FROM employees
+WHERE salary > 50000
+GROUP BY department;
+
+-- HAVING filters groups after aggregation
+SELECT department, COUNT(*) 
+FROM employees
+GROUP BY department
+HAVING COUNT(*) > 5;
+```
+
+---
+
+### 2. **What is a JOIN? List different types.**
+
+**Answer:**
+A JOIN combines rows from two or more tables.
+
+Types:
+
+* INNER JOIN
+* LEFT JOIN
+* RIGHT JOIN
+* FULL OUTER JOIN
+* SELF JOIN
+* CROSS JOIN
+
+```sql
+SELECT e.name, d.name 
+FROM employee e
+JOIN department d ON e.dept_id = d.id;
+```
+
+---
+
+### 3. **What is a subquery?**
+
+**Answer:**
+A subquery is a query inside another query.
+
+```sql
+SELECT name, salary 
+FROM employee 
+WHERE salary > (SELECT AVG(salary) FROM employee);
+```
+
+---
+
+### 4. **What is normalization in databases?**
+
+**Answer:**
+Normalization organizes data to reduce redundancy and improve integrity.
+
+* 1NF: Atomic values
+* 2NF: Remove partial dependencies
+* 3NF: Remove transitive dependencies
+
+---
+
+## 🔹 Python – 4 Questions
+
+### 5. **What are Python’s basic data types?**
+
+**Answer:**
+`int`, `float`, `str`, `bool`, `list`, `tuple`, `dict`, `set`
+
+```python
+a = 10          # int
+b = "Hello"     # str
+c = [1, 2, 3]   # list
+```
+
+---
+
+### 6. **What is the difference between a list and a tuple?**
+
+**Answer:**
+
+* `list` is mutable: can change values
+* `tuple` is immutable: can't change
+
+```python
+my_list = [1, 2, 3]
+my_tuple = (1, 2, 3)
+```
+
+---
+
+### 7. **What is a lambda function?**
+
+**Answer:**
+An anonymous function in Python.
+
+```python
+square = lambda x: x * x
+print(square(5))  # Output: 25
+```
+
+---
+
+### 8. **How do you handle exceptions in Python?**
+
+**Answer:**
+Use `try...except` block.
+
+```python
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Can't divide by zero!")
+```
+
+---
+
+## 🔹 PySpark – 2 Questions
+
+### 9. **What is PySpark?**
+
+**Answer:**
+PySpark is the Python API for Apache Spark – used for big data processing.
+
+```python
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName("Basics").getOrCreate()
+```
+
+---
+
+### 10. **How do you read a CSV file using PySpark?**
+
+```python
+df = spark.read.csv("data.csv", header=True, inferSchema=True)
+df.show()
+```
+Absolutely! Here's a set of **10 theoretical questions with clear and concise answers** covering **SQL, Python, and PySpark** concepts—ideal for interviews and revision.
+
+---
+
+## 🔹 SQL – Theory Questions
+
+### 1. **What is a Primary Key?**
+
+**Answer:**
+A **Primary Key** uniquely identifies each row in a table. It cannot be `NULL` and must be **unique**.
+
+---
+
+### 2. **What is the difference between DELETE, TRUNCATE, and DROP?**
+
+**Answer:**
+
+* **DELETE:** Deletes selected rows, can be rolled back.
+* **TRUNCATE:** Deletes all rows, cannot be rolled back.
+* **DROP:** Deletes the entire table structure.
+
+---
+
+### 3. **What is a View in SQL?**
+
+**Answer:**
+A **View** is a virtual table based on the result of a SQL query. It does not store data physically.
+
+```sql
+CREATE VIEW high_salary AS
+SELECT name, salary FROM employee WHERE salary > 50000;
+```
+
+---
+
+### 4. **What are constraints in SQL?**
+
+**Answer:**
+Constraints enforce rules on data columns, like:
+
+* `NOT NULL`
+* `UNIQUE`
+* `PRIMARY KEY`
+* `FOREIGN KEY`
+* `CHECK`
+* `DEFAULT`
+
+---
+
+## 🔹 Python – Theory Questions
+
+### 5. **What is the difference between shallow copy and deep copy?**
+
+**Answer:**
+
+* **Shallow copy:** Copies the reference of objects.
+* **Deep copy:** Recursively copies the entire structure.
+
+```python
+import copy
+a = [[1, 2], [3, 4]]
+b = copy.deepcopy(a)
+```
+
+---
+
+### 6. **What are Python decorators?**
+
+**Answer:**
+Decorators are functions that modify the behavior of other functions.
+
+```python
+def decorator(func):
+    def wrapper():
+        print("Before")
+        func()
+        print("After")
+    return wrapper
+```
+
+---
+
+### 7. **What is the difference between `is` and `==`?**
+
+**Answer:**
+
+* `==` checks for **value equality**.
+* `is` checks for **object identity** (memory address).
+
+```python
+a = [1, 2]
+b = a
+print(a == b)  # True
+print(a is b)  # True
+```
+
+---
+
+## 🔹 PySpark – Theory Questions
+
+### 8. **What is an RDD in PySpark?**
+
+**Answer:**
+RDD (Resilient Distributed Dataset) is the **core data structure** of Spark. It is immutable, distributed, and fault-tolerant.
+
+---
+
+### 9. **What is the difference between RDD and DataFrame?**
+
+**Answer:**
+
+| Feature     | RDD           | DataFrame              |
+| ----------- | ------------- | ---------------------- |
+| Type        | Low-level API | High-level API         |
+| Performance | Slower        | Optimized via Catalyst |
+| Schema      | No            | Yes                    |
+
+---
+
+### 10. **How does Spark achieve fault tolerance?**
+
+**Answer:**
+Using **lineage** (DAG), Spark can recompute lost data by tracking the operations used to build the dataset.
+
+---
+
 
 
